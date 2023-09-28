@@ -4,6 +4,7 @@ namespace DatabaseApp_Paul_Zaldea
 {
     public static class Constants
     {
+        public const string CardDataTableName = "SM_CardDataAct";
         public const uint INITIAL = 0; 
         public const uint REDEEMED = 1; 
         public const uint ESTIMATE = 2; 
