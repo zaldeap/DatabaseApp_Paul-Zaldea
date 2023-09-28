@@ -1,0 +1,78 @@
+﻿<Window x:Class="DatabaseApp_Paul_Zaldea.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DatabaseApp_Paul_Zaldea"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="528" Width="800"
+        ResizeMode="NoResize">
+    <Grid Margin="0,0,0,0" >
+        <Label Content="Server" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.159,0.049" Height="26" Width="46" HorizontalAlignment="Left"/>
+        <Label Content="Database" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <TextBox x:Name="txtBoxServer" Text="172.22.123.223,1433" HorizontalAlignment="Left" Margin="80,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="" GotFocus="txtBoxServer_GotFocus"/>
+        <TextBox x:Name="txtBoxDatabase" Text="RET_drReports" HorizontalAlignment="Left" Margin="80,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="" GotFocus="txtBoxDatabase_GotFocus"/>
+        <Label Content="User" Margin="330,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.159,0.049" Height="26" Width="46" HorizontalAlignment="Left"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="330,41,0,0" VerticalAlignment="Top" Height="30" Width="62"/>
+        <TextBox x:Name="txtBoxUser" Text="sa" HorizontalAlignment="Left" Margin="400,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="" GotFocus="txtBoxUser_GotFocus"/>
+        <PasswordBox x:Name="pwdBoxPassword" Password="" HorizontalAlignment="Left" Margin="400,47,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnTestCon" Content="Test Connection" HorizontalAlignment="Left" Margin="670,27,0,0" VerticalAlignment="Top" Height="42" Width="98" Click="btnTestCon_Click" />
+        <Label x:Name="filterLabel" Content="Filter" HorizontalAlignment="Left" Margin="85,91,0,0" VerticalAlignment="Top" Height="47" Width="55" FontFamily="Sans Serif Collection" FontSize="20" />
+        <Label Content="Card Number" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Height="24"/>
+        <TextBox x:Name="txtBoxCardNumber" Text="Enter a Card Number"  HorizontalAlignment="Left" Margin="112,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="" GotFocus="txtBoxCardNumber_GotFocus"/>
+        <CheckBox x:Name="checkBoxCardNR" HorizontalAlignment="Left" Margin="259,176,0,0" VerticalAlignment="Top" Height="18" Width="16" />
+        <Label Content="TypeLevel" HorizontalAlignment="Left" Margin="15,210,0,0" VerticalAlignment="Top" Height="24" Width="72"/>
+        <TextBox x:Name="txtBoxTypeLvl" Text="Please enter a type level" HorizontalAlignment="Left" Margin="112,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="" GotFocus="txtBoxTypeLvl_GotFocus"/>
+        <CheckBox x:Name="checkBoxTypeLvl" HorizontalAlignment="Left" Margin="259,213,0,0" VerticalAlignment="Top" Height="18" Width="16" />
+        <Label Content="Site Issued" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Height="24"/>
+        <TextBox x:Name="txtBoxSiteIssued" Text="Where was the card issued" HorizontalAlignment="Left" Margin="112,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="" GotFocus="txtBoxSiteIssued_GotFocus"/>
+        <CheckBox x:Name="checkBoxSiteIssued" HorizontalAlignment="Left" Margin="259,265,0,0" VerticalAlignment="Top" Height="18" Width="16" />
+        <Label Content="Currency" HorizontalAlignment="Left" Margin="15,299,0,0" VerticalAlignment="Top" Height="34" Width="72"/>
+        <TextBox x:Name="txtBoxCurrency" Text="EUR/USD/CHF..." HorizontalAlignment="Left" Margin="112,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.HelpText="" GotFocus="txtBoxCurrency_GotFocus"/>
+        <CheckBox x:Name="checkBoxCurrency" HorizontalAlignment="Left" Margin="259,302,0,0" VerticalAlignment="Top" Height="18" Width="16" />
+        <Label Content="Registered Players" HorizontalAlignment="Left" Margin="10,338,0,0" VerticalAlignment="Top" Height="24"/>
+        <CheckBox x:Name="checkBoxRegedPlayers" HorizontalAlignment="Left" Margin="124,344,0,0" VerticalAlignment="Top" Height="18" Width="16" />
+        <Label Content="Assigned Cards" HorizontalAlignment="Left" Margin="15,371,0,0" VerticalAlignment="Top" Height="24" Width="97"/>
+        <CheckBox x:Name="checkBoxAssignedCards" HorizontalAlignment="Left" Margin="124,374,0,0" VerticalAlignment="Top" Height="18" Width="16" />
+        <Label Content="Records uncertified" HorizontalAlignment="Left" Margin="15,406,0,0" VerticalAlignment="Top" Height="24" Width="185"/>
+        <CheckBox x:Name="checkBoxRecordsNullCert" HorizontalAlignment="Left" Margin="259,409,0,0" VerticalAlignment="Top" Height="18" Width="16" />
+        <Button x:Name="btnApplyFilters" Content="Apply Filters" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top" Width="100" Click="btnApplyFilters_Click"/>
+        <Button x:Name="btnSaveSQLScript" Content="Save SQL Script" HorizontalAlignment="Left" Margin="120,440,0,0" VerticalAlignment="Top" Width="120" Click="btnSaveSQLScript_Click"/>
+        <TextBox x:Name="txtBoxCasinoIssued"  HorizontalAlignment="Left" Margin="421,182,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxCasinoIdUsed"  HorizontalAlignment="Left" Margin="644,179,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxSiteIssuedd" HorizontalAlignment="Left" Margin="421,225,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmbBoxTypeLevel" HorizontalAlignment="Left" Margin="421,332,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="0"/>
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+        </ComboBox>
+        <ComboBox x:Name="cmbBoxEndReason"  HorizontalAlignment="Left" Margin="643,342,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmbBoxCurrency"  HorizontalAlignment="Left" Margin="421,377,0,0" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="checkBoxCardLocked" Content="CardLocked" HorizontalAlignment="Left" Margin="638,393,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBoxBalCCC" HorizontalAlignment="Left" Margin="645,226,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxBalNCC"  HorizontalAlignment="Left" Margin="421,258,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxBalPts"  HorizontalAlignment="Left" Margin="646,262,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxDeposit" HorizontalAlignment="Left" Margin="423,292,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxValidDaydDays" HorizontalAlignment="Left" Margin="643,305,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbl_ChangeData" Content="Change Data" HorizontalAlignment="Left" Margin="517,100,0,0" VerticalAlignment="Top" Height="47" Width="156" FontFamily="Sans Serif Collection" FontSize="20" />
+        <Label Content="Casino Issued" HorizontalAlignment="Left" Margin="328,178,0,0" VerticalAlignment="Top"/>
+        <Label Content="Site Issued" HorizontalAlignment="Left" Margin="324,224,0,0" VerticalAlignment="Top"/>
+        <Label Content="Bal NCC" HorizontalAlignment="Left" Margin="326,257,0,0" VerticalAlignment="Top"/>
+        <Label Content="Deposit" HorizontalAlignment="Left" Margin="323,290,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type Level" HorizontalAlignment="Left" Margin="319,329,0,0" VerticalAlignment="Top"/>
+        <Label Content="Currency" HorizontalAlignment="Left" Margin="316,374,0,0" VerticalAlignment="Top"/>
+        <Label Content="Casino Issued ID" HorizontalAlignment="Left" Margin="553,177,0,0" VerticalAlignment="Top"/>
+        <Label Content="Bal CCC" HorizontalAlignment="Left" Margin="552,229,0,0" VerticalAlignment="Top"/>
+        <Label Content="Bal PTS" HorizontalAlignment="Left" Margin="549,259,0,0" VerticalAlignment="Top"/>
+        <Label Content="Valid Days" HorizontalAlignment="Left" Margin="553,303,0,0" VerticalAlignment="Top"/>
+        <Label Content="End Reason" HorizontalAlignment="Left" Margin="553,338,0,0" VerticalAlignment="Top"/>
+        <Button Content="Apply Data Changes" HorizontalAlignment="Left" Margin="643,435,0,0" VerticalAlignment="Top" Height="40" Width="118" Click="ButtonApplyChanges_Click"/>
+        <TextBox x:Name="txtBoxCardNumberChanges"  HorizontalAlignment="Left" Margin="419,151,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Card Number" HorizontalAlignment="Left" Margin="326,147,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
