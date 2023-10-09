@@ -88,13 +88,13 @@ namespace DatabaseApp_Paul_Zaldea
 
         private string GenerateSQLScript()
         {
-            // Build your SQL script content here based on the filters
+            
             string sqlScript = "";
             if (!CheckChangeBoxes())
             {
                 sqlScript = $"UPDATE {Constants.CardDataTableName} SET ";
 
-                // Use the SQL extension methods to generate SQL queries
+               
                 sqlScript += ChangeDataInDatabase();
             }
             if (!CheckFilterBoxes())
